@@ -17,7 +17,10 @@ module.exports = {
     plugins: [
         // plugins的配置
         // html-webpack-plugin
-        new HtmlWebpackPlugin()
+        // 功能：默认回创建一个空的HTMl,自动引入打包输出的所有资源（JS/CSS）
+        new HtmlWebpackPlugin({
+            // 复制 './src/index.html' HTML 
+        })
     ],
     mode: 'development'
 }
