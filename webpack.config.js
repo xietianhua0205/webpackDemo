@@ -33,7 +33,17 @@ module.exports = {
                 // 将 css 文件以字符串 变成 common.js 模块加载到js,里面的内容是样式字符串
                 'css-loader'
             ]
-        }]
+        },
+            {
+                test:/\.less$/,
+                use:[
+                    'style-loader',
+                    'css-loader',
+                    // 将less 文件编译成 css 文件 和 less
+                    'less-loader'
+                ]
+            }
+        ]
     },
     // plugins 的配置
     plugins: [],
